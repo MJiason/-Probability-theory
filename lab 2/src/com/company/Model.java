@@ -6,8 +6,9 @@ public class Model {
     private double lambda;
     private int k;
     private Random random = new Random();
+
     public Model(String lambda, String k) {
-        this.lambda = Integer.valueOf(lambda);
+        this.lambda = Double.valueOf(lambda);
         this.k = Integer.valueOf(k);
     }
 
@@ -23,7 +24,7 @@ public class Model {
 
 
     double[] genArrayValues() {
-        double[] arrayValues = new double[50000];
+        double[] arrayValues = new double[5000];
         for (int i = 0; i < arrayValues.length; i++) {
             arrayValues[i] = generateValue();
         }
@@ -47,7 +48,7 @@ public class Model {
         return dispersion / array.length;
     }
 
-    double Sigma(double Dispersion){
+    double Sigma(double Dispersion) {
         return Math.sqrt(Dispersion);
     }
 
@@ -59,4 +60,7 @@ public class Model {
         return 1 / (this.k * Math.pow(lambda, 2));
     }
 
+
 }
+
+

@@ -37,20 +37,25 @@ public class Main {
             button1.addActionListener(new ActionListener() {
                 @Override
                 public void actionPerformed(ActionEvent e) {
+                    Isnumeric isnumeric = new Isnumeric();
+                    if (!(isnumeric.isNumeric(field1.getText()) && isnumeric.isDigit(field2.getText()))) {
+                        return;
+                    } else {
 
-                    Model model = new Model(field1.getText(), field2.getText());
-                    double[] array = model.genArrayValues();
-                    double mathExp = model.countMathExpectation(array);
-                    double actualDis = model.countDispersion(array, mathExp);
+                        Model model = new Model(field1.getText(), field2.getText());
+                        double[] array = model.genArrayValues();
+                        double mathExp = model.countMathExpectation(array);
+                        double actualDis = model.countDispersion(array, mathExp);
 
-                    field3.setText("MathExpectation " + String.format("%.7f", model.mathExpectation()) + "\n" +
-                            "Dispersion " + String.format("%.7f", model.dispersion()) + "\n"
-                            + "Sigma " + String.format("%.7f", model.Sigma(model.dispersion())));
+                        field3.setText("MathExpectation " + String.format("%.7f", model.mathExpectation()) + "\n" +
+                                "Dispersion " + String.format("%.7f", model.dispersion()) + "\n"
+                                + "Sigma " + String.format("%.7f", model.Sigma(model.dispersion())));
 
-                    field4.setText("MathExpectation " + String.format("%.7f", mathExp) + "\n" +
-                            "Dispersion " + String.format("%.7f", actualDis) + "\n"
-                            + "Sigma " + String.format("%.7f", model.Sigma(actualDis)));
+                        field4.setText("MathExpectation " + String.format("%.7f", mathExp) + "\n" +
+                                "Dispersion " + String.format("%.7f", actualDis) + "\n"
+                                + "Sigma " + String.format("%.7f", model.Sigma(actualDis)));
 
+                    }
                 }
             });
             button2.addActionListener(new ActionListener() {
