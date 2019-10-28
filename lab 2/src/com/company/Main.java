@@ -11,14 +11,14 @@ public class Main {
         try {
 
             // create text forms
-            JTextArea field1 = new JTextArea("123");
-            JTextArea field2 = new JTextArea("123");
-            JTextArea field3 = new JTextArea(2,0);
-            JTextArea field4 = new JTextArea(2, 0);
+            JTextArea field1 = new JTextArea("3");
+            JTextArea field2 = new JTextArea("2");
+            JTextArea field3 = new JTextArea(3, 0);
+            JTextArea field4 = new JTextArea(3, 0);
             field1.setBounds(300, 20, 200, 30);
             field2.setBounds(300, 60, 200, 30);
             field3.setBounds(50, 200, 200, 150);
-            field4.setBounds(340, 200,200, 150);
+            field4.setBounds(340, 200, 200, 150);
 
             // create labels
             JLabel label1 = new JLabel("Lambda: ");
@@ -41,12 +41,15 @@ public class Main {
                     Model model = new Model(field1.getText(), field2.getText());
                     double[] array = model.genArrayValues();
                     double mathExp = model.countMathExpectation(array);
+                    double actualDis = model.countDispersion(array, mathExp);
 
-                    field3.setText("MathExpectation "+ String.format("%.7f", model.mathExpectation()) + "\n\n"+
-                            "Dispersion "+String.format("%.7f", model.dispersion()));
+                    field3.setText("MathExpectation " + String.format("%.7f", model.mathExpectation()) + "\n" +
+                            "Dispersion " + String.format("%.7f", model.dispersion()) + "\n"
+                            + "Sigma " + String.format("%.7f", model.Sigma(model.dispersion())));
 
-                    field4.setText("MathExpectation "+ String.format("%.7f", mathExp) + "\n\n"+
-                            "Dispersion "+String.format("%.7f", model.countDispersion(array, mathExp)));
+                    field4.setText("MathExpectation " + String.format("%.7f", mathExp) + "\n" +
+                            "Dispersion " + String.format("%.7f", actualDis) + "\n"
+                            + "Sigma " + String.format("%.7f", model.Sigma(actualDis)));
 
                 }
             });
@@ -76,7 +79,6 @@ public class Main {
             frame.add(button1);
             frame.add(button2);
             frame.setVisible(true);
-
 
 
         } catch (Exception e) {

@@ -47,6 +47,10 @@ public class Model {
         return dispersion / array.length;
     }
 
+    double Sigma(double Dispersion){
+        return Math.sqrt(Dispersion);
+    }
+
     double mathExpectation() {
         return 1 / this.lambda;
     }
