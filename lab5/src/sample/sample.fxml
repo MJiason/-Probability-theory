@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.shape.*?>
+<?import javafx.scene.text.*?>
+
+<GridPane maxHeight="475"  maxWidth="600" minHeight="475" minWidth="600" prefHeight="475.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/10.0.2-internal" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.Controller">
+        <columnConstraints>
+          <ColumnConstraints />
+          <ColumnConstraints hgrow="SOMETIMES" maxWidth="295.0" minWidth="10.0" prefWidth="160.6" />
+            <ColumnConstraints hgrow="SOMETIMES" maxWidth="444.99998474121094" minWidth="10.0" prefWidth="209.8" />
+      <ColumnConstraints hgrow="SOMETIMES" maxWidth="444.99998474121094" minWidth="10.0" prefWidth="181.2" />
+      <ColumnConstraints />
+      <ColumnConstraints />
+        </columnConstraints>
+        <rowConstraints>
+          <RowConstraints maxHeight="116.4" minHeight="10.0" prefHeight="91.8" vgrow="SOMETIMES" />
+          <RowConstraints maxHeight="164.8" minHeight="10.0" prefHeight="164.8" vgrow="SOMETIMES" />
+          <RowConstraints maxHeight="150.39998474121097" minHeight="10.0" prefHeight="134.40001525878904" vgrow="SOMETIMES" />
+        </rowConstraints>
+         <children>
+            <Circle fill="#1f93ff" radius="42.0" stroke="BLACK" strokeType="INSIDE" GridPane.columnIndex="1" GridPane.columnSpan="3" GridPane.rowIndex="1">
+               <GridPane.margin>
+                  <Insets left="60.0" right="100.0" top="10.0" />
+               </GridPane.margin>
+            </Circle>
+            <Text strokeType="OUTSIDE" strokeWidth="0.0" text="1" textAlignment="JUSTIFY" GridPane.columnIndex="1" GridPane.rowIndex="1">
+               <GridPane.margin>
+                  <Insets left="95.0" top="10.0" />
+               </GridPane.margin>
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Text>
+            <Circle fill="DODGERBLUE" radius="42.0" stroke="BLACK" strokeType="INSIDE" GridPane.columnIndex="3" GridPane.rowIndex="1">
+               <GridPane.margin>
+                  <Insets left="30.0" top="10.0" />
+               </GridPane.margin>
+            </Circle>
+            <Text strokeType="OUTSIDE" strokeWidth="0.0" text="2" GridPane.columnIndex="3" GridPane.rowIndex="1">
+               <GridPane.margin>
+                  <Insets left="66.0" top="10.0" />
+               </GridPane.margin>
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Text>
+            <QuadCurve controlX="-50.0" controlY="-100.0" endX="100.0" fill="#f2f2f2" focusTraversable="true" mouseTransparent="true" pickOnBounds="true" startX="-180.0" stroke="BLACK" strokeType="INSIDE" GridPane.columnIndex="2" GridPane.rowIndex="1">
+               <GridPane.margin>
+                  <Insets bottom="100.0" left="-30.0" />
+               </GridPane.margin>
+            </QuadCurve>
+            <QuadCurve controlX="-50.0" controlY="100.0" endX="100.0" fill="#f2f2f2" focusTraversable="true" layoutX="376.0" layoutY="168.0" mouseTransparent="true" pickOnBounds="true" startX="-180.0" stroke="BLACK" strokeType="INSIDE" GridPane.columnIndex="2" GridPane.rowIndex="1">
+               <GridPane.margin>
+                  <Insets left="-30.0" top="120.0" />
+               </GridPane.margin>
+            </QuadCurve>
+      <TextField fx:id="Intensity1" alignment="CENTER" prefHeight="19.0" prefWidth="82.0" GridPane.columnIndex="2">
+         <GridPane.margin>
+            <Insets bottom="20.0" left="80.0" right="80.0" top="60.0" />
+         </GridPane.margin>
+         <cursor>
+            <Cursor fx:constant="W_RESIZE" />
+         </cursor>
+         <font>
+            <Font size="20.0" />
+         </font>
+      </TextField>
+      <TextField fx:id="Intensity2" alignment="CENTER" maxWidth="-Infinity" prefHeight="62.0" prefWidth="57.0" GridPane.columnIndex="2" GridPane.rowIndex="2">
+         <GridPane.margin>
+            <Insets bottom="80.0" left="80.0" right="80.0" top="30.0" />
+         </GridPane.margin>
+         <opaqueInsets>
+            <Insets />
+         </opaqueInsets>
+         <font>
+            <Font size="20.0" />
+         </font>
+      </TextField>
+      <Button fx:id="Calculate" mnemonicParsing="false" onAction="#countValues" text="Calculate" GridPane.columnIndex="2" GridPane.rowIndex="2">
+         <GridPane.margin>
+            <Insets left="65.0" top="70.0" />
+         </GridPane.margin>
+      </Button>
+      <Line endX="18.0" GridPane.columnIndex="3" GridPane.columnSpan="3" GridPane.rowIndex="1">
+         <GridPane.margin>
+            <Insets bottom="50.0" left="15.0" />
+         </GridPane.margin></Line>
+             <Line endX="20.0" rotate="60.0" GridPane.columnIndex="3" GridPane.columnSpan="3" GridPane.rowIndex="1">
+                 <GridPane.margin>
+                     <Insets bottom="70.0" left="20.0" />
+                 </GridPane.margin></Line>
+             <Line endX="20.0" rotate="70.0" GridPane.columnIndex="1" GridPane.columnSpan="2" GridPane.rowIndex="1">
+                 <GridPane.margin>
+                     <Insets left="129.0" top="90.0" />
+                 </GridPane.margin></Line>
+             <Line endX="20.0" GridPane.columnIndex="1" GridPane.columnSpan="2" GridPane.rowIndex="1">
+                 <GridPane.margin>
+                     <Insets left="135.0" top="69.0" />
+                 </GridPane.margin></Line>
+                    </children>
+         <padding>
+            <Insets left="30.0" right="10.0" />
+         </padding>
+      </GridPane>

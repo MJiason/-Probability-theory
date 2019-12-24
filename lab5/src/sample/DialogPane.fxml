@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<GridPane  maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/10.0.2-internal" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.Controller">
+  <columnConstraints>
+    <ColumnConstraints hgrow="SOMETIMES" maxWidth="295.0" minWidth="10.0" prefWidth="32.99999237060547" />
+    <ColumnConstraints hgrow="SOMETIMES" maxWidth="567.0000076293945" minWidth="10.0" prefWidth="561.2" />
+      <ColumnConstraints hgrow="SOMETIMES" maxWidth="567.0000076293945" minWidth="10.0" prefWidth="29.200000000000045" />
+      <ColumnConstraints />
+  </columnConstraints>
+  <rowConstraints>
+    <RowConstraints maxHeight="76.4" minHeight="8.40000143051148" prefHeight="10.400001907348638" vgrow="SOMETIMES" />
+    <RowConstraints maxHeight="340.19999856948857" minHeight="10.0" prefHeight="338.1999980926514" vgrow="SOMETIMES" />
+    <RowConstraints maxHeight="127.40000000000003" minHeight="0.0" prefHeight="0.0" vgrow="SOMETIMES" />
+  </rowConstraints>
+   <children>
+      <TextArea fx:id="outputArea" prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="1">
+         <font>
+            <Font size="14.0" />
+         </font></TextArea>
+   </children>
+</GridPane>
